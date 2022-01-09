@@ -12,6 +12,8 @@ class BottomBar extends StatelessWidget {
       color: Colors.deepPurple,
       child: ResponsiveWidget.isSmallScreen(context)
           ? Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -42,33 +44,33 @@ class BottomBar extends StatelessWidget {
                   width: double.maxFinite,
                   height: 1,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 InfoText(
                   type: 'Phone',
                   text: '+92 322 2060194',
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 InfoText(
                   type: 'Email',
                   text: 'madarsahasnainmoavia@gmail.com',
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 InfoText(
                   type: 'Address',
                   text:
                       'Babar Plaza, 1st FLoar, Godhra Gali, Nanakwada, Karachi',
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Container(
                   color: Colors.blueGrey,
                   width: double.maxFinite,
                   height: 1,
                 ),
-                SizedBox(height: 20),
-                Text(
-                  'Copyright © 2022 | MHM Developed By Abdul Sattar Suleman',
+                const SizedBox(height: 20),
+                const Text(
+                  'Copyright © 2022 MHM | Developed By Abdul Sattar Suleman',
                   style: TextStyle(
-                    color: Colors.blueGrey[300],
+                    color: Colors.white,
                     fontSize: 14,
                   ),
                 ),
@@ -110,12 +112,12 @@ class BottomBar extends StatelessWidget {
                           type: 'Phone',
                           text: '+92 322 2060194',
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         InfoText(
                           type: 'Email',
                           text: 'madarsahasnainmoavia@gmail.com',
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         InfoText(
                           type: 'Address',
                           text: 'Godhra Gali,nanakwada,karachi.',
@@ -132,11 +134,11 @@ class BottomBar extends StatelessWidget {
                     height: 1,
                   ),
                 ),
-                SizedBox(height: 20),
-                Text(
-                  'Copyright © 2022 | MHM Developed By Abdul Sattar Suleman',
+                const SizedBox(height: 20),
+                const Text(
+                  'Copyright © 2022 MHM | Developed By Abdul Sattar Suleman',
                   style: TextStyle(
-                    color: Colors.blueGrey[300],
+                    color: Colors.white,
                     fontSize: 14,
                   ),
                 ),

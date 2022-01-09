@@ -22,10 +22,10 @@ class BottomBarColumn extends StatelessWidget {
         children: [
           Text(
             heading,
-            style: TextStyle(
-              color: Colors.blueGrey[300],
+            style: const TextStyle(
+              color: Colors.black,
               fontSize: 18,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w700,
             ),
           ),
           SizedBox(

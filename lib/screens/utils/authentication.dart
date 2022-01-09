@@ -12,8 +12,6 @@ String? name;
 String? userEmail;
 String? imageUrl;
 
-/// For checking if the user is already signed into the
-/// app using Google Sign In
 Future getUser() async {
   await Firebase.initializeApp();
 

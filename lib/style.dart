@@ -8,3 +8,7 @@ TextStyle navBar = GoogleFonts.ibmPlexSans(
   fontSize: 20,
   fontWeight: FontWeight.bold,
 );
+
+TextStyle bodyText = const TextStyle(
+  fontSize: 19,
+);

@@ -65,17 +65,7 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ],
-              title: Text(
-                'EXPLORE',
-                style: TextStyle(
-                  color: Colors.blueGrey[100],
-                  fontSize: 20,
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.w400,
-                  letterSpacing: 3,
-                ),
-              ),
-            )
+              title: Text("Madrasah Hasnain Moavia"))
           : PreferredSize(
               preferredSize: Size(screenSize.width, 1000),
               child: TopBarContents(_opacity),
@@ -107,26 +97,22 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(
                         height: 130,
                       ),
-                      Container(
-                        child: Column(
-                          children: [
-                            DestinationCarousel(),
-                            SizedBox(
-                              height: 200,
-                            ),
-                            IntroductionText(),
-                            FeaturedHeading(
-                              screenSize: screenSize,
-                            ),
-                            FeaturedTiles(screenSize: screenSize)
-                          ],
-                        ),
+                      Column(
+                        children: [
+                          DestinationCarousel(),
+                          DestinationHeading(screenSize: screenSize),
+                          IntroductionText(),
+                          FeaturedHeading(
+                            screenSize: screenSize,
+                          ),
+                          FeaturedTiles(screenSize: screenSize)
+                        ],
                       ),
                     ],
                   )
                 ],
               ),
-              DestinationHeading(screenSize: screenSize),
+              // DestinationHeading(screenSize: screenSize),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),
             ],

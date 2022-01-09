@@ -15,10 +15,8 @@ class InfoText extends StatelessWidget {
       children: [
         Text(
           '$type: ',
-          style: TextStyle(
-            color: Colors.blueGrey[300],
-            fontSize: 16,
-          ),
+          style: const TextStyle(
+              color: Colors.black, fontSize: 16, fontWeight: FontWeight.w700),
         ),
         Flexible(
           child: Text(

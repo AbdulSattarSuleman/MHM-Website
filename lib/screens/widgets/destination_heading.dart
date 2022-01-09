@@ -14,16 +14,16 @@ class DestinationHeading extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveWidget.isSmallScreen(context)
         ? Container(
-            padding: EdgeInsets.only(
-              top: screenSize.height / 20,
-              bottom: screenSize.height / 20,
+            padding: const EdgeInsets.only(
+              top: 10,
+              bottom: 10,
             ),
             width: screenSize.width,
             // color: Colors.black,
             child: Text(
-              'Introductions',
+              'Introduction'.toUpperCase(),
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 24,
                 fontFamily: 'Montserrat',
@@ -39,7 +39,7 @@ class DestinationHeading extends StatelessWidget {
             width: screenSize.width,
             // color: Colors.black,
             child: const Text(
-              'Introductions',
+              'Introduction',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black,

@@ -16,7 +16,12 @@ class FeaturedTiles extends StatelessWidget {
     'assets/images/slider-3.jpg',
   ];
 
-  final List<String> title = ['Trekking', 'Animals', 'Photography'];
+  final List<String> title = [
+    'HIFZ E QURAN STUDENTS',
+    'NAZRA QURAN STUDENTS',
+    'QAIDA STUDENTS',
+    ''
+  ];
 
   @override
   Widget build(BuildContext context) {
