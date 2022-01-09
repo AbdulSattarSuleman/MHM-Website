@@ -193,6 +193,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                   ],
                 ),
               ),
+              SizedBox(
+                width: 30,
+              ),
               IconButton(
                 icon: Icon(Icons.brightness_6),
                 splashColor: Colors.transparent,
