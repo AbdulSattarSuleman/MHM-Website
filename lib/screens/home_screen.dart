@@ -8,6 +8,7 @@ import 'package:mhm_website/screens/widgets/destination_heading.dart';
 import 'package:mhm_website/screens/widgets/explore_drawer.dart';
 import 'package:mhm_website/screens/widgets/featured_heading.dart';
 import 'package:mhm_website/screens/widgets/featured_tiles.dart';
+import 'package:mhm_website/screens/widgets/google_map.dart';
 import 'package:mhm_website/screens/widgets/introduction_text.dart';
 import 'package:mhm_website/screens/widgets/top_bar_contents.dart';
 import 'package:mhm_website/screens/widgets/web_scrollbar.dart';
@@ -100,12 +101,17 @@ class _HomePageState extends State<HomePage> {
                       Column(
                         children: [
                           DestinationCarousel(),
+                          // MySlider(),
                           DestinationHeading(screenSize: screenSize),
                           IntroductionText(),
                           FeaturedHeading(
                             screenSize: screenSize,
                           ),
-                          FeaturedTiles(screenSize: screenSize)
+                          FeaturedTiles(screenSize: screenSize),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          MyGoogleMap(),
                         ],
                       ),
                     ],
@@ -113,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               // DestinationHeading(screenSize: screenSize),
-              SizedBox(height: screenSize.height / 10),
+              // SizedBox(height: screenSize.height / 10),
               BottomBar(),
             ],
           ),
