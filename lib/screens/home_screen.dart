@@ -7,9 +7,8 @@ import 'package:mhm_website/screens/widgets/carousal.dart';
 import 'package:mhm_website/screens/widgets/destination_heading.dart';
 import 'package:mhm_website/screens/widgets/explore_drawer.dart';
 import 'package:mhm_website/screens/widgets/featured_heading.dart';
-import 'package:mhm_website/screens/widgets/featured_tiles.dart';
-import 'package:mhm_website/screens/widgets/google_map.dart';
 import 'package:mhm_website/screens/widgets/introduction_text.dart';
+import 'package:mhm_website/screens/widgets/student_count.dart';
 import 'package:mhm_website/screens/widgets/top_bar_contents.dart';
 import 'package:mhm_website/screens/widgets/web_scrollbar.dart';
 
@@ -107,11 +106,13 @@ class _HomePageState extends State<HomePage> {
                           FeaturedHeading(
                             screenSize: screenSize,
                           ),
-                          FeaturedTiles(screenSize: screenSize),
+                          // FeaturedTiles(screenSize: screenSize),
+                          StudentCountScreen(screenSize: screenSize),
                           SizedBox(
                             height: 20,
                           ),
-                          MyGoogleMap(),
+                          // MyGoogleMap(),
+                          // APIData(),
                         ],
                       ),
                     ],

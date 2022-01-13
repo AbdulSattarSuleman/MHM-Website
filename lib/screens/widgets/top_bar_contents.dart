@@ -1,5 +1,6 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:mhm_website/screens/widgets/api_data.dart';
 
 class TopBarContents extends StatefulWidget {
   final double opacity;
@@ -127,7 +128,10 @@ class _TopBarContentsState extends State<TopBarContents> {
                               : _isHovering[3] = false;
                         });
                       },
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => APIData()));
+                      },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [

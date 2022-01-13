@@ -46,6 +46,9 @@ dependencies:
   google_maps_flutter: ^2.1.1
   google_maps_flutter_web: ^0.3.2
   flutter_carousel_slider: ^1.0.8
+  flutter_html:  
+  webview_flutter: ^2.8.0
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:

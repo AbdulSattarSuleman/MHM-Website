@@ -20,7 +20,6 @@ class FeaturedTiles extends StatelessWidget {
     'HIFZ E QURAN STUDENTS',
     'NAZRA QURAN STUDENTS',
     'QAIDA STUDENTS',
-    ''
   ];
 
   @override

@@ -25,7 +25,7 @@ class FeaturedHeading extends StatelessWidget {
               children: [
                 Row(),
                 Text(
-                  'Latest Events',
+                  'Our Servies',
                   style: TextStyle(
                     fontSize: 24,
                     fontFamily: 'Montserrat',
@@ -46,7 +46,7 @@ class FeaturedHeading extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  'Latest Events',
+                  'Our Services',
                   style: TextStyle(
                     fontSize: 40,
                     fontFamily: 'Montserrat',
