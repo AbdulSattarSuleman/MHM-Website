@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'responsive.dart';
 
 class FeaturedHeading extends StatelessWidget {
-  const FeaturedHeading({
-    Key? key,
-    required this.screenSize,
-  }) : super(key: key);
+  const FeaturedHeading(
+      {Key? key, required this.screenSize, required this.title})
+      : super(key: key);
 
   final Size screenSize;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class FeaturedHeading extends StatelessWidget {
               children: [
                 Row(),
                 Text(
-                  'Our Servies',
+                  title,
                   style: TextStyle(
                     fontSize: 24,
                     fontFamily: 'Montserrat',
@@ -46,7 +46,7 @@ class FeaturedHeading extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  'Our Services',
+                  title,
                   style: TextStyle(
                     fontSize: 40,
                     fontFamily: 'Montserrat',

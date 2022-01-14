@@ -16,8 +16,10 @@ class _VideoScreenState extends State<VideoScreen> {
   @override
   void initState() {
     super.initState();
-    _videoController = VideoPlayerController.asset(
-        "https://drive.google.com/file/d/15BP-M4-1rsZPOYxFJ6gntqI_5Fi2cn2m/view?usp=sharing");
+    // _videoController = VideoPlayerController.network(
+    //     "https://github.com/AbdulSattarSuleman/MHM-Website/blob/master/assets/images/mhm-video.mp4");
+    _videoController =
+        VideoPlayerController.asset("assets/images/mhm-video.mp4");
     _video = _videoController.initialize();
   }
 
@@ -29,65 +31,71 @@ class _VideoScreenState extends State<VideoScreen> {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return ResponsiveWidget.isSmallScreen(context)
-                ? Column(
-                    children: [
-                      Container(
-                        width: screenSize.width,
-                        height: screenSize.width / 1.5,
-                        color: Colors.green,
-                        child: Center(
+                ? Container(
+                    margin: EdgeInsets.only(top: 30),
+                    width: screenSize.width,
+                    height: screenSize.width / 1.5,
+                    color: Colors.deepPurple,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Center(
                           child: AspectRatio(
                             aspectRatio: _videoController.value.aspectRatio,
                             child: VideoPlayer(_videoController),
                           ),
                         ),
-                      ),
-                      ElevatedButton(
-                          onPressed: () {
-                            if (_videoController.value.isPlaying) {
-                              setState(() {
-                                _videoController.pause();
-                              });
-                            } else {
-                              setState(() {
-                                _videoController.play();
-                              });
-                            }
-                          },
-                          child: Icon(_videoController.value.isPlaying
-                              ? Icons.pause
-                              : Icons.play_arrow)),
-                    ],
+                        ElevatedButton(
+                            onPressed: () {
+                              if (_videoController.value.isPlaying) {
+                                setState(() {
+                                  _videoController.pause();
+                                });
+                              } else {
+                                setState(() {
+                                  _videoController.play();
+                                });
+                              }
+                            },
+                            child: Icon(_videoController.value.isPlaying
+                                ? Icons.pause
+                                : Icons.play_arrow)),
+                      ],
+                    ),
                   )
-                : Column(
-                    children: [
-                      Container(
-                        width: screenSize.width,
-                        height: screenSize.width / 4.5,
-                        color: Colors.green,
-                        child: Center(
-                          child: AspectRatio(
-                            aspectRatio: _videoController.value.aspectRatio,
-                            child: VideoPlayer(_videoController),
-                          ),
+                : Container(
+                    width: screenSize.width,
+                    height: screenSize.width / 4.5,
+                    color: Colors.deepPurple,
+                    child: Center(
+                        child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                            width: screenSize.width * 0.9,
+                            height: 300,
+                            child: VideoPlayer(_videoController)),
+                        SizedBox(
+                          height: 30,
                         ),
-                      ),
-                      ElevatedButton(
-                          onPressed: () {
-                            if (_videoController.value.isPlaying) {
-                              setState(() {
-                                _videoController.pause();
-                              });
-                            } else {
-                              setState(() {
-                                _videoController.play();
-                              });
-                            }
-                          },
-                          child: Icon(_videoController.value.isPlaying
-                              ? Icons.pause
-                              : Icons.play_arrow)),
-                    ],
+                        ElevatedButton(
+                            onPressed: () {
+                              if (_videoController.value.isPlaying) {
+                                setState(() {
+                                  _videoController.pause();
+                                });
+                              } else {
+                                setState(() {
+                                  _videoController.play();
+                                });
+                              }
+                            },
+                            child: Icon(_videoController.value.isPlaying
+                                ? Icons.pause
+                                : Icons.play_arrow)),
+                      ],
+                    )),
                   );
           } else {
             return Center(

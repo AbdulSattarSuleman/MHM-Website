@@ -7,6 +7,7 @@ import 'package:mhm_website/screens/widgets/carousal.dart';
 import 'package:mhm_website/screens/widgets/destination_heading.dart';
 import 'package:mhm_website/screens/widgets/explore_drawer.dart';
 import 'package:mhm_website/screens/widgets/featured_heading.dart';
+import 'package:mhm_website/screens/widgets/google_map.dart';
 import 'package:mhm_website/screens/widgets/introduction_text.dart';
 import 'package:mhm_website/screens/widgets/student_count.dart';
 import 'package:mhm_website/screens/widgets/top_bar_contents.dart';
@@ -103,10 +104,16 @@ class _HomePageState extends State<HomePage> {
                           DestinationCarousel(),
                           // MySlider(),
                           DestinationHeading(screenSize: screenSize),
+
                           IntroductionText(),
+                          FeaturedHeading(
+                            screenSize: screenSize,
+                            title: "Latest Examination",
+                          ),
                           VideoScreen(),
                           FeaturedHeading(
                             screenSize: screenSize,
+                            title: "Our Services",
                           ),
                           // FeaturedTiles(screenSize: screenSize),
 
@@ -114,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: 20,
                           ),
-                          // MyGoogleMap(),
+                          MyGoogleMap(),
                           // APIData(),
                         ],
                       ),
