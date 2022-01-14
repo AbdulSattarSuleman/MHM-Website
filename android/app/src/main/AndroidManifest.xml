@@ -8,6 +8,9 @@
          <!-- TODO: Add your Google Maps API key here -->
         <meta-data android:name="com.google.android.geo.API_KEY"
                android:value="AIzaSyDlVXmHWbkLWJeyVA_kxa58PzpnAJNvPQw"/>
+        
+        
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -37,4 +40,5 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

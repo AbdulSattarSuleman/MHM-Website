@@ -10,6 +10,7 @@ import 'package:mhm_website/screens/widgets/featured_heading.dart';
 import 'package:mhm_website/screens/widgets/introduction_text.dart';
 import 'package:mhm_website/screens/widgets/student_count.dart';
 import 'package:mhm_website/screens/widgets/top_bar_contents.dart';
+import 'package:mhm_website/screens/widgets/video_section.dart';
 import 'package:mhm_website/screens/widgets/web_scrollbar.dart';
 
 import 'widgets/responsive.dart';
@@ -103,10 +104,12 @@ class _HomePageState extends State<HomePage> {
                           // MySlider(),
                           DestinationHeading(screenSize: screenSize),
                           IntroductionText(),
+                          VideoScreen(),
                           FeaturedHeading(
                             screenSize: screenSize,
                           ),
                           // FeaturedTiles(screenSize: screenSize),
+
                           StudentCountScreen(screenSize: screenSize),
                           SizedBox(
                             height: 20,

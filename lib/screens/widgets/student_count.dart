@@ -38,7 +38,7 @@ class StudentCountScreen extends StatelessWidget {
                           ...Iterable<int>.generate(sliderImages.length).map(
                             (int pageIndex) => Center(
                               child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(10.0),
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
