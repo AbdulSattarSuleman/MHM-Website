@@ -7,8 +7,9 @@ Future getStudentCount() async {
   final response = await http
       .get(Uri.parse('https://dashboard.deatrust.org/api/IOT/SectionCount'));
   var data = jsonDecode(response.body.toString());
-  print(data);
+
   if (response.statusCode == 200) {
+    print(data);
     // for (Map i in data) {
     //   SectionCountModel countModel = SectionCountModel(
     //       nazraCount: i['nazraCount'],
@@ -21,6 +22,7 @@ Future getStudentCount() async {
     // return studentCountList;
     return data;
   } else {
+    print("loading api");
     return data;
   }
 }
