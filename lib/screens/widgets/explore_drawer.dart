@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mhm_website/screens/utils/authentication.dart';
+import 'package:mhm_website/screens/widgets/user_authentication.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ExploreDrawer extends StatefulWidget {
@@ -92,7 +92,11 @@ class _ExploreDrawerState extends State<ExploreDrawer> {
                   style: TextStyle(color: Colors.white, fontSize: 34)),
               const SizedBox(height: 20),
 
-              userEmail != null ? const SizedBox(height: 20) : Container(),
+              // userEmail != null ? const SizedBox(height: 20) : Container(),
+
+              SizedBox(
+                height: 50,
+              ),
               InkWell(
                 onTap: () {},
                 child: const Text(
@@ -139,6 +143,23 @@ class _ExploreDrawerState extends State<ExploreDrawer> {
                 onTap: () {},
                 child: const Text(
                   'Contact Us',
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                child: Divider(
+                  color: Colors.blueGrey[400],
+                  thickness: 2,
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => UserAuth()));
+                },
+                child: const Text(
+                  'Register',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),

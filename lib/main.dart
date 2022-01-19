@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:mhm_website/screens/home_screen.dart';
 import 'package:mhm_website/screens/utils/theme_data.dart';
 
-import 'screens/utils/authentication.dart';
-
 void main() {
   runApp(
     EasyDynamicThemeWidget(
@@ -19,15 +17,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Future getUserInfo() async {
-    await getUser();
-    setState(() {});
-    print(uid);
-  }
+  // Future getUserInfo() async {
+  //   await getUser();
+  //   setState(() {});
+  //   print(uid);
+  // }
 
   @override
   void initState() {
-    getUserInfo();
+    // getUserInfo();
     super.initState();
   }
 

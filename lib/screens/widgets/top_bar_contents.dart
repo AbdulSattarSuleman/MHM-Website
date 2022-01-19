@@ -1,6 +1,7 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:mhm_website/screens/widgets/api_data.dart';
+import 'package:mhm_website/screens/widgets/user_authentication.dart';
 
 import '../home_screen.dart';
 
@@ -190,6 +191,45 @@ class _TopBarContentsState extends State<TopBarContents> {
                             maintainState: true,
                             maintainSize: true,
                             visible: _isHovering[2],
+                            child: Container(
+                              height: 2,
+                              width: 20,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: screenSize.width / 20),
+                    InkWell(
+                      onHover: (value) {
+                        setState(() {
+                          value
+                              ? _isHovering[5] = true
+                              : _isHovering[5] = false;
+                        });
+                      },
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => UserAuth()));
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            'Register',
+                            style: TextStyle(
+                              color: _isHovering[5]
+                                  ? Colors.blue[200]
+                                  : Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Visibility(
+                            maintainAnimation: true,
+                            maintainState: true,
+                            maintainSize: true,
+                            visible: _isHovering[5],
                             child: Container(
                               height: 2,
                               width: 20,
