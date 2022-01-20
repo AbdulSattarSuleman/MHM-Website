@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                           IntroductionText(),
                           FeaturedHeading(
                             screenSize: screenSize,
-                            title: "Latest Examination",
+                            title: "Latest Examination Events",
                           ),
                           VideoScreen(),
                           FeaturedHeading(
