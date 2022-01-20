@@ -69681,7 +69681,7 @@ i=A.aM(B.d.aQ(76.5),96,125,139)
 s=A.a(p.d,n)
 r=A.a(p.d,n)
 q=t.p
-return A.anr(m,k.rx,A.asz(i,A.arQ(A.cL(A.b([A.kn(B.aS,A.b([A.bp(o,A.bk(o,j*0.2,l.a),B.l,B.bE,o,o,o,o,o,o,o,o,o,o),A.cL(A.b([A.bk(o,130,o),A.cL(A.b([new A.uJ(o),new A.E_(l,o),new A.Fl(o),new A.vc(l,"Latest Examination",o),new A.yX(o),new A.vc(l,"Our Services",o),new A.Jq(l,o),A.bk(o,20,o),new A.wz(o)],q),B.z,B.G,B.y)],q),B.z,B.G,B.y)],q),B.b1),new A.D0(o)],q),B.z,B.G,B.y),r,B.xP,B.ab),B.V,s,0.3,10),new A.mV(o),!0)}}
+return A.anr(m,k.rx,A.asz(i,A.arQ(A.cL(A.b([A.kn(B.aS,A.b([A.bp(o,A.bk(o,j*0.2,l.a),B.l,B.bE,o,o,o,o,o,o,o,o,o,o),A.cL(A.b([A.bk(o,130,o),A.cL(A.b([new A.uJ(o),new A.E_(l,o),new A.Fl(o),new A.vc(l,"Latest Examination Events",o),new A.yX(o),new A.vc(l,"Our Services",o),new A.Jq(l,o),A.bk(o,20,o),new A.wz(o)],q),B.z,B.G,B.y)],q),B.z,B.G,B.y)],q),B.b1),new A.D0(o)],q),B.z,B.G,B.y),r,B.xP,B.ab),B.V,s,0.3,10),new A.mV(o),!0)}}
 A.afE.prototype={
 $0(){var s=this.a,r=B.b.gbr(A.a(s.d,"_scrollController").d).cx
 r.toString
