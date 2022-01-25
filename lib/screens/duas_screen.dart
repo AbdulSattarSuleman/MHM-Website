@@ -180,7 +180,7 @@ class PrayerDuaScreen extends StatelessWidget {
                                   child: Center(
                                     child: Image.network(
                                       duaImages[index],
-                                      fit: BoxFit.fitWidth,
+                                      fit: BoxFit.cover,
                                       filterQuality: FilterQuality.high,
                                     ),
                                   ),
