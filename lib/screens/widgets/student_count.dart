@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:mhm_website/screens/widgets/responsive.dart';
 import 'package:mhm_website/services/api_service.dart';
 
@@ -15,6 +16,7 @@ final List<String> categoryTitle = [
 ];
 
 class StudentCountScreen extends StatelessWidget {
+  // late final AnimationController _controller = AnimationController(duration: const Duration(seconds: 3))
   final Size screenSize;
   StudentCountScreen({Key? key, required this.screenSize}) : super(key: key);
 
@@ -64,21 +66,6 @@ class StudentCountScreen extends StatelessWidget {
                                             bottom: screenSize.height / 70,
                                           ),
                                           child: pageIndex == 0
-                                              // ? Text(
-                                              //     categoryTitle[pageIndex] +
-                                              //         snapshot
-                                              //             .data['nazraCount']
-                                              //             .toString(),
-                                              //     style: TextStyle(
-                                              //         fontSize: 16,
-                                              //         fontFamily: 'Montserrat',
-                                              //         fontWeight:
-                                              //             FontWeight.w900,
-                                              //         color: Theme.of(context)
-                                              //             .primaryTextTheme
-                                              //             .subtitle1!
-                                              //             .color),
-                                              //   )
                                               ? Center(
                                                   child: Text(
                                                     categoryTitle[pageIndex] +
@@ -88,7 +75,7 @@ class StudentCountScreen extends StatelessWidget {
                                                         fontFamily:
                                                             'Montserrat',
                                                         fontWeight:
-                                                            FontWeight.w900,
+                                                            FontWeight.w800,
                                                         color: Theme.of(context)
                                                             .primaryTextTheme
                                                             .subtitle1!
@@ -106,7 +93,7 @@ class StudentCountScreen extends StatelessWidget {
                                                             fontFamily:
                                                                 'Montserrat',
                                                             fontWeight:
-                                                                FontWeight.w900,
+                                                                FontWeight.w800,
                                                             color: Theme.of(
                                                                     context)
                                                                 .primaryTextTheme
@@ -124,7 +111,7 @@ class StudentCountScreen extends StatelessWidget {
                                                             fontFamily:
                                                                 'Montserrat',
                                                             fontWeight:
-                                                                FontWeight.w900,
+                                                                FontWeight.w800,
                                                             color: Theme.of(
                                                                     context)
                                                                 .primaryTextTheme
@@ -136,9 +123,6 @@ class StudentCountScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              // SizedBox(
-                              //   width: screenSize.width / 15,
-                              // ),
                             )
                           ],
                         ),
@@ -173,19 +157,13 @@ class StudentCountScreen extends StatelessWidget {
                                   top: screenSize.height / 70,
                                 ),
                                 child: pageIndex == 0
-                                    // ? ResuableText(
-                                    //     pageIndex: pageIndex,
-                                    //     snapshot: snapshot,
-                                    //     studentCount: ['nazraCount'],
-                                    //     key: key,
-                                    //   )
                                     ? Text(
                                         categoryTitle[pageIndex] +
                                             ' ${snapshot.data['nazraCount'].toString()}',
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.w900,
+                                            fontWeight: FontWeight.w800,
                                             color: Theme.of(context)
                                                 .primaryTextTheme
                                                 .subtitle1!
@@ -198,7 +176,7 @@ class StudentCountScreen extends StatelessWidget {
                                             style: TextStyle(
                                                 fontSize: 16,
                                                 fontFamily: 'Montserrat',
-                                                fontWeight: FontWeight.w900,
+                                                fontWeight: FontWeight.w800,
                                                 color: Theme.of(context)
                                                     .primaryTextTheme
                                                     .subtitle1!
@@ -210,7 +188,7 @@ class StudentCountScreen extends StatelessWidget {
                                             style: TextStyle(
                                                 fontSize: 16,
                                                 fontFamily: 'Montserrat',
-                                                fontWeight: FontWeight.w900,
+                                                fontWeight: FontWeight.w800,
                                                 color: Theme.of(context)
                                                     .primaryTextTheme
                                                     .subtitle1!
@@ -224,8 +202,11 @@ class StudentCountScreen extends StatelessWidget {
                     ),
                   );
           } else {
-            return Center(
-              child: CircularProgressIndicator.adaptive(),
+            return const Center(
+              child: SpinKitFadingCircle(
+                color: Colors.deepPurple,
+                size: 50,
+              ),
             );
           }
         });

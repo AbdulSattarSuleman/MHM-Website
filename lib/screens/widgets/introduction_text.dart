@@ -22,7 +22,10 @@ class IntroductionText extends StatelessWidget {
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       image: DecorationImage(
-                          image: AssetImage("assets/images/intro.jpg"))),
+                          image: AssetImage(
+                            "assets/images/intro.jpg",
+                          ),
+                          fit: BoxFit.cover)),
                 ),
               ),
               const Padding(

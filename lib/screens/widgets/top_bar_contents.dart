@@ -1,7 +1,7 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:mhm_website/screens/widgets/api_data.dart';
-import 'package:mhm_website/screens/widgets/user_authentication.dart';
+import 'package:mhm_website/screens/duas_screen.dart';
+import 'package:mhm_website/screens/widgets/auth/login_screen.dart';
 
 import '../home_screen.dart';
 
@@ -135,14 +135,16 @@ class _TopBarContentsState extends State<TopBarContents> {
                         });
                       },
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => APIData()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => PrayerDuaScreen()));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            'Services',
+                            'Prayers For Daily Use',
                             style: TextStyle(
                               color: _isHovering[3]
                                   ? Colors.blue[200]
@@ -211,7 +213,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       },
                       onTap: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => UserAuth()));
+                            MaterialPageRoute(builder: (_) => LoginScreen()));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,

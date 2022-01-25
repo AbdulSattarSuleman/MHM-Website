@@ -1,15 +1,14 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:mhm_website/services/utils/app_url.dart';
 
 List studentCountList = [];
 Future getStudentCount() async {
-  final response = await http
-      .get(Uri.parse('https://dashboard.deatrust.org/api/IOT/SectionCount'));
+  final response = await http.get(Uri.parse(AppUrl.studentCount));
   var data = jsonDecode(response.body.toString());
 
   if (response.statusCode == 200) {
-    print(data);
     // for (Map i in data) {
     //   SectionCountModel countModel = SectionCountModel(
     //       nazraCount: i['nazraCount'],

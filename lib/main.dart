@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:mhm_website/screens/home_screen.dart';
 import 'package:mhm_website/screens/utils/theme_data.dart';
 
-void main() {
+void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(
     EasyDynamicThemeWidget(
       child: MyApp(),

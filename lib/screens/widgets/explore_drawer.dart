@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mhm_website/screens/widgets/user_authentication.dart';
+import 'package:mhm_website/screens/duas_screen.dart';
+import 'package:mhm_website/screens/widgets/auth/login_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ExploreDrawer extends StatefulWidget {
@@ -126,9 +127,12 @@ class _ExploreDrawerState extends State<ExploreDrawer> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => PrayerDuaScreen()));
+                },
                 child: const Text(
-                  'Services',
+                  'Prayers For Daily Use',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
@@ -155,8 +159,8 @@ class _ExploreDrawerState extends State<ExploreDrawer> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => UserAuth()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => LoginScreen()));
                 },
                 child: const Text(
                   'Register',

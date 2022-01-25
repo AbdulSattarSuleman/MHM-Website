@@ -103,7 +103,10 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           DestinationCarousel(),
                           // MySlider(),
-                          DestinationHeading(screenSize: screenSize),
+                          DestinationHeading(
+                            screenSize: screenSize,
+                            title: "Introduction",
+                          ),
 
                           IntroductionText(),
                           FeaturedHeading(
